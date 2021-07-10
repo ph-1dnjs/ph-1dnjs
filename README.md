@@ -2,7 +2,7 @@
 phw-plain/phw-plain is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
-![benner](https://user-images.githubusercontent.com/79081836/125028789-994ae900-e0c3-11eb-82f2-65a1215c8fd7.png)
+![mainbenner](https://user-images.githubusercontent.com/79081836/125163746-84f11400-e1c9-11eb-82c5-58bc38b5a92e.png)
 
 <h3 align="center"><b>🛠 Tech Stack 🛠</b></h3>
 <h4 align="center">Techs that I've used at least once</h4>
