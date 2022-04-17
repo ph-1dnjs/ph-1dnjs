@@ -26,3 +26,5 @@ You can click the Preview link to take a look at your changes.
 [![phw-plain's GitHub stats](https://github-readme-stats.vercel.app/api?username=phw-plain)](https://github.com/phw-plain/github-readme-stats)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=phw-plain&layout=compact)](https://github.com/phw-plain/github-readme-stats)
+
+[![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj={phw-plain})](https://solved.ac/{phw-plain})
