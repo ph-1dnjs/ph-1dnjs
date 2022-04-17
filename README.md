@@ -4,8 +4,7 @@ You can click the Preview link to take a look at your changes.
 --->
 <div align="center">
   
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=F7BD15&background=000000E4&center=true&vCenter=true&width=1000&height=300&lines=Hello+World!!;Hi+there%2C+I'm+developer+phw-plain.)](https://git.io/typing-svg)
-
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=35&color=F7BD15&background=000000E4&center=true&vCenter=true&width=1000&height=350&lines=Hello+World!!;Hi+there%2C+I'm+developer+phw-plain.)](https://git.io/typing-svg)
   
 <div align="center">
   
