@@ -4,6 +4,14 @@ You can click the Preview link to take a look at your changes.
 --->
 ![mainbenner](https://user-images.githubusercontent.com/79081836/125163746-84f11400-e1c9-11eb-82c5-58bc38b5a92e.png)
 
+<div align="center">
+  
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fphw-plain&count_bg=%23FFDB0E&title_bg=%23696969&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+  
+</div>
+
+<hr>
+</br>
 <h3 align="center"><b>🛠 Tech Stack 🛠</b></h3>
 <h4 align="center">Techs that I've used at least once</h4>
 <p align="center">
@@ -22,10 +30,17 @@ You can click the Preview link to take a look at your changes.
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=Android&logoColor=white"/></a> &nbsp
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/></a> &nbsp </p>
 </br>
+<hr>
 
+<div align=center>
+  
 [![phw-plain's GitHub stats](https://github-readme-stats.vercel.app/api?username=phw-plain)](https://github.com/phw-plain/github-readme-stats)
 
+      
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=phw-plain&layout=compact)](https://github.com/phw-plain/github-readme-stats)
 
+      
 [![Solved.ac
-프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj={phw-plain})](https://solved.ac/{phw-plain})
+      프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=ppy7228)](https://solved.ac/ppy7228)
+
+</div>
