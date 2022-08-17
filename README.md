@@ -10,10 +10,6 @@ You can click the Preview link to take a look at your changes.
   
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fphw-plain&count_bg=%23FFDB0E&title_bg=%23696969&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
   
-  
-[![Solved.ac
-프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=ppy7228)](https://github.com/mazassumnida/ppy7228)
-  
 </div>
 
 <hr>
