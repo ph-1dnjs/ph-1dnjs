@@ -6,11 +6,6 @@ You can click the Preview link to take a look at your changes.
   
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?size=35&color=F7BD15&background=000000E4&center=true&vCenter=true&width=1000&height=350&lines=Hello+World!!;Hi+there%2C+I'm+developer+phw-plain.)](https://git.io/typing-svg)
   
-<div align="center">
-  
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fphw-plain&count_bg=%23FFDB0E&title_bg=%23696969&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-  
-</div>
 
 <hr>
 </br>
