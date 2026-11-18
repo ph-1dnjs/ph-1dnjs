@@ -18,6 +18,6 @@
 
 활동을 바탕으로 한 작업 기록입니다.
 
-<table><tr><td width="50%"><strong>42</strong><br /><sub>포크를 포함한 공개 저장소입니다.</sub></td><td width="50%"><strong>22</strong><br /><sub>올해 공개 및 비공개 커밋·이슈·PR·리뷰 활동 합계입니다.</sub></td></tr></table>
+<table><tr><td width="50%"><strong>42</strong><br /><sub>포크를 포함한 공개 저장소입니다.</sub></td><td width="50%"><strong>38</strong><br /><sub>올해 공개 및 비공개 커밋·이슈·PR·리뷰 활동 합계입니다.</sub></td></tr></table>
 
 <div align="center"><sub>Designed to build, learn &amp; keep moving ✦</sub></div>
