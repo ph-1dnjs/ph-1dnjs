@@ -40,6 +40,17 @@ def contributions(token):
 def escape(value):
     return html.escape(str(value), quote=True)
 
+def make_project_card(repo):
+    name = escape(repo['name'])
+    date = escape(repo['pushed_at'][:10])
+    stars = repo['stargazers_count']
+    forks = repo['forks_count']
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="260" height="190" viewBox="0 0 260 190" role="img" aria-label="{name}"><rect x="1" y="1" width="258" height="188" rx="20" fill="#fafafa" stroke="#e5e5e5"/><g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif"><text x="22" y="36" font-size="10" font-weight="700" letter-spacing="1" fill="#888">PUBLIC PROJECT ↗</text><text x="22" y="78" font-size="23" font-weight="700" fill="#292929">{name}</text><line x1="22" y1="126" x2="238" y2="126" stroke="#e5e5e5"/><text x="22" y="151" font-size="11" fill="#777">최근 코드 업데이트 {date}</text><text x="22" y="171" font-size="11" fill="#777">★ {stars}  ·  ⑂ {forks}</text></g></svg>'''
+
+def make_activity_card(public_count, activity):
+    activity = escape(activity)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="800" height="140" viewBox="0 0 800 140" role="img" aria-label="공개 저장소 {public_count}개, 최근 1년 활동 {activity}건"><g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif"><rect x="1" y="1" width="389" height="138" rx="20" fill="#fafafa" stroke="#e5e5e5"/><rect x="411" y="1" width="388" height="138" rx="20" fill="#fafafa" stroke="#e5e5e5"/><text x="26" y="57" font-size="32" font-weight="700" fill="#444">{public_count}</text><text x="26" y="91" font-size="14" fill="#777">포크를 포함한 공개 저장소입니다.</text><text x="436" y="57" font-size="32" font-weight="700" fill="#444">{activity}</text><text x="436" y="88" font-size="14" fill="#777">최근 1년간 공개 및 비공개</text><text x="436" y="110" font-size="14" fill="#777">커밋·이슈·PR·리뷰 활동 합계입니다.</text></g></svg>'''
+
 def make_chart(languages):
     colors = ['#353535', '#595959', '#777777', '#969696', '#b3b3b3', '#d0d0d0']
     items = languages.most_common()
@@ -71,16 +82,20 @@ def main():
     for repo in originals:
         languages.update(request(repo['languages_url']))
     (ROOT / 'assets/languages.svg').write_text(make_chart(languages), encoding='utf-8')
-    project_rows = []
-    for r in featured:
+    project_cards = []
+    for index, r in enumerate(featured, 1):
         name = escape(r['name'])
         url = escape(r['html_url'])
-        date = escape(r['pushed_at'][:10])
-        project_rows.append(f'<td width="33%"><a href="{url}"><strong>{name} ↗</strong></a><br /><br /><sub>최근 코드 업데이트 {date}<br />★ {r["stargazers_count"]} · ⑂ {r["forks_count"]}</sub></td>')
-    project_table = '<table><tr>' + ''.join(project_rows) + '</tr></table>' if project_rows else '표시할 공개 프로젝트가 없습니다.'
+        filename = f'project-{index}.svg'
+        (ROOT / 'assets' / filename).write_text(make_project_card(r), encoding='utf-8')
+        project_cards.append(f'<a href="{url}"><img src="assets/{filename}" alt="{name}" width="32%" /></a>')
+    for index in range(len(featured) + 1, 4):
+        (ROOT / 'assets' / f'project-{index}.svg').unlink(missing_ok=True)
+    projects = '\n'.join(project_cards) if project_cards else '표시할 공개 프로젝트가 없습니다.'
     activity = '—'
     if PRIVATE_TOKEN:
         activity = str(contributions(PRIVATE_TOKEN))
+    (ROOT / 'assets/activity.svg').write_text(make_activity_card(len(public), activity), encoding='utf-8')
     readme = f'''<div align="center">
 
 <img src="assets/hero.svg" alt="Hi, I'm Una. 생각을 현실로 만들고, 그 결과를 세상에 보여주는 것을 좋아합니다." width="100%" />
@@ -89,7 +104,7 @@ def main():
 
 ## Featured Projects
 
-{project_table}
+{projects}
 
 ## Languages in My Repositories
 
@@ -101,7 +116,7 @@ def main():
 
 활동을 바탕으로 한 작업 기록입니다.
 
-<table><tr><td width="50%"><strong>{len(public)}</strong><br /><sub>포크를 포함한 공개 저장소입니다.</sub></td><td width="50%"><strong>{activity}</strong><br /><sub>최근 1년간 공개 및 비공개 커밋·이슈·PR·리뷰 활동 합계입니다.</sub></td></tr></table>
+<img src="assets/activity.svg" alt="공개 저장소 {len(public)}개, 최근 1년간 공개 및 비공개 활동 {activity}건" width="100%" />
 
 <div align="center"><sub>Designed to build, learn &amp; keep moving ✦</sub></div>
 '''
