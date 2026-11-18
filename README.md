@@ -8,7 +8,7 @@
 
 <a href="https://github.com/ph-1dnjs/checkly"><img src="assets/project-1.svg" alt="checkly" width="32%" /></a>
 <a href="https://github.com/ph-1dnjs/doxen"><img src="assets/project-2.svg" alt="doxen" width="32%" /></a>
-<a href="https://github.com/ph-1dnjs/auto-qa"><img src="assets/project-3.svg" alt="auto-qa" width="32%" /></a>
+<a href="https://github.com/ph-1dnjs/interacta"><img src="assets/project-3.svg" alt="interacta" width="32%" /></a>
 
 ## Products &amp; Experiences
 
@@ -21,7 +21,7 @@
 
 ## Languages in My Repositories
 
-저장소의 코드가 어떤 언어로 이루어져 있는지 보여드립니다.
+제 저장소의 코드가 어떤 언어로 이루어져 있는지 보여드립니다.
 
 <img src="assets/languages.svg" alt="공개 원본 저장소의 언어별 코드 비율" width="100%" />
 
@@ -29,6 +29,6 @@
 
 활동을 바탕으로 한 작업 기록입니다.
 
-<img src="assets/activity.svg" alt="공개 저장소 42개, 최근 1년간 공개 및 비공개 활동 38건" width="100%" />
+<img src="assets/activity.svg" alt="공개 저장소 41개, 최근 1년간 공개 및 비공개 활동 39건" width="100%" />
 
 <div align="center"><sub>Designed to build, learn &amp; keep moving ✦</sub></div>
