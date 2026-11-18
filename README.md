@@ -6,7 +6,9 @@
 
 ## Featured Projects
 
-<table><tr><td width="33%"><a href="https://github.com/ph-1dnjs/checkly"><strong>checkly ↗</strong></a><br /><br /><sub>최근 코드 업데이트 2026-11-17<br />★ 0 · ⑂ 0</sub></td><td width="33%"><a href="https://github.com/ph-1dnjs/doxen"><strong>doxen ↗</strong></a><br /><br /><sub>최근 코드 업데이트 2026-11-16<br />★ 0 · ⑂ 0</sub></td><td width="33%"><a href="https://github.com/ph-1dnjs/auto-qa"><strong>auto-qa ↗</strong></a><br /><br /><sub>최근 코드 업데이트 2026-06-10<br />★ 0 · ⑂ 2</sub></td></tr></table>
+<a href="https://github.com/ph-1dnjs/checkly"><img src="assets/project-1.svg" alt="checkly" width="32%" /></a>
+<a href="https://github.com/ph-1dnjs/doxen"><img src="assets/project-2.svg" alt="doxen" width="32%" /></a>
+<a href="https://github.com/ph-1dnjs/auto-qa"><img src="assets/project-3.svg" alt="auto-qa" width="32%" /></a>
 
 ## Languages in My Repositories
 
@@ -18,6 +20,6 @@
 
 활동을 바탕으로 한 작업 기록입니다.
 
-<table><tr><td width="50%"><strong>42</strong><br /><sub>포크를 포함한 공개 저장소입니다.</sub></td><td width="50%"><strong>38</strong><br /><sub>최근 1년간 공개 및 비공개 커밋·이슈·PR·리뷰 활동 합계입니다.</sub></td></tr></table>
+<img src="assets/activity.svg" alt="공개 저장소 42개, 최근 1년간 공개 및 비공개 활동 38건" width="100%" />
 
 <div align="center"><sub>Designed to build, learn &amp; keep moving ✦</sub></div>
