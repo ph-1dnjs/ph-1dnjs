@@ -12,7 +12,7 @@
 
 ## Languages in My Repositories
 
-제 저장소의 코드가 어떤 언어로 이루어져 있는지 보여드립니다.
+저장소의 코드가 어떤 언어로 이루어져 있는지 보여드립니다.
 
 <img src="assets/languages.svg" alt="공개 원본 저장소의 언어별 코드 비율" width="100%" />
 
