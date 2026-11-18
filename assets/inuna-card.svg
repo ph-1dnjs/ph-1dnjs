@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="125" viewBox="0 0 800 125" role="img" aria-label="Inuna · 출시 심사 중 · 자세히 보기">
+  <rect x="1" y="1" width="798" height="123" rx="20" fill="#fafafa" stroke="#e5e5e5"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif">
+    <text x="28" y="37" font-size="11" font-weight="700" letter-spacing="1" fill="#888">MOBILE APP</text>
+    <text x="28" y="79" font-size="26" font-weight="700" fill="#292929">Inuna</text>
+    <rect x="659" y="21" width="110" height="28" rx="14" fill="#fff" stroke="#ddd"/>
+    <text x="714" y="40" text-anchor="middle" font-size="12" fill="#666">출시 심사 중</text>
+    <text x="769" y="91" text-anchor="end" font-size="13" fill="#777">자세히 보기 ⌄</text>
+  </g>
+</svg>

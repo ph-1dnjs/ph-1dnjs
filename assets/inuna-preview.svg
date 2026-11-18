@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="230" viewBox="0 0 800 230" role="img" aria-label="Inuna는 현재 출시 심사 중입니다.">
+  <rect x="1" y="1" width="798" height="228" rx="20" fill="#f6f6f6" stroke="#e5e5e5"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif">
+    <text x="36" y="60" font-size="11" font-weight="700" letter-spacing="1.4" fill="#888">ABOUT THE PROJECT</text>
+    <text x="36" y="110" font-size="30" font-weight="700" fill="#333">Inuna</text>
+    <text x="36" y="148" font-size="16" fill="#777">현재 출시 심사 중입니다.</text>
+    <text x="36" y="178" font-size="13" fill="#999">프로젝트 소개와 서비스 화면을 준비하고 있습니다.</text>
+  </g>
+  <circle cx="680" cy="115" r="71" fill="#ededed"/><circle cx="680" cy="115" r="43" fill="#f8f8f8"/><text x="680" y="127" text-anchor="middle" font-family="sans-serif" font-size="38" fill="#aaa">✳</text>
+</svg>
