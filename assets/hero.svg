@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="265" viewBox="0 0 800 265" role="img" aria-label="Hi, I'm Una.">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f5f5"/><stop offset="1" stop-color="#e8e8e8"/></linearGradient></defs>
+  <rect x="1" y="1" width="798" height="263" rx="24" fill="url(#bg)" stroke="#e3e3e3"/>
+  <circle cx="718" cy="51" r="102" fill="#fff" opacity=".35"/><circle cx="742" cy="210" r="75" fill="#fff" opacity=".22"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif">
+    <text x="48" y="57" fill="#888" font-size="12" font-weight="700" letter-spacing="2">✦ HELLO, WORLD</text>
+    <text x="48" y="123" fill="#292929" font-size="50" font-weight="700">Hi, I'm <tspan fill="#777">Una.</tspan></text>
+    <text x="48" y="164" fill="#666" font-size="17">생각을 현실로 만들고, 그 결과를 세상에 보여주는 것을 좋아합니다.</text>
+    <rect x="48" y="192" width="207" height="32" rx="16" fill="#fff" fill-opacity=".65" stroke="#ddd"/>
+    <text x="65" y="213" fill="#777" font-size="11" font-weight="700">✦  CREATE · BUILD · IMPROVE</text>
+  </g>
+</svg>
