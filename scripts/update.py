@@ -109,7 +109,9 @@ def main():
 ## Products &amp; Experiences
 
 <details>
-<summary><img src="assets/inuna-card.svg" alt="Inuna · 출시 심사 중 · 자세히 보기" width="100%" /></summary>
+<summary><strong>Inuna</strong> · 출시 심사 중 — 자세히 보기</summary>
+
+<img src="assets/inuna-card.svg" alt="Inuna · 출시 심사 중" width="100%" />
 
 <img src="assets/inuna-preview.svg" alt="Inuna는 현재 출시 심사 중입니다. 프로젝트 소개와 서비스 화면을 준비하고 있습니다." width="100%" />
 
