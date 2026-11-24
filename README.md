@@ -29,6 +29,6 @@
 
 활동을 바탕으로 한 작업 기록입니다.
 
-<img src="assets/activity.svg" alt="공개 저장소 41개, 최근 1년간 공개 및 비공개 활동 41건" width="100%" />
+<img src="assets/activity.svg" alt="공개 저장소 42개, 최근 1년간 공개 및 비공개 활동 41건" width="100%" />
 
 <div align="center"><sub>Designed to build, learn &amp; keep moving ✦</sub></div>
