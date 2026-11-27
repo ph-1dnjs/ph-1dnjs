@@ -1,14 +1,18 @@
 name: Update profile
 on:
   push:
+    branches: [main]
     paths:
       - '.github/workflows/update-profile.yml'
-      - 'scripts/update.py'
+      - 'scripts/**'
   schedule:
     - cron: '17 0 * * *'
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: profile-write
+  cancel-in-progress: false
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -17,17 +21,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Update profile data
+      - name: Render posters
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PROFILE_PRIVATE_TOKEN: ${{ secrets.PROFILE_PRIVATE_TOKEN }}
         run: python scripts/update.py
       - name: Commit updates
         run: |
-          if [ -n "$(git status --porcelain README.md assets)" ]; then
+          if [ -n "$(git status --porcelain README.md assets data)" ]; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add -A README.md assets
-            git commit -m 'Update profile metrics'
-            git push
+            git add -A README.md assets data
+            git commit -m 'Update profile posters'
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
           fi
