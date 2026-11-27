@@ -1,7 +1,6 @@
 import json
 import os
 import sys
-import urllib.parse
 import urllib.request
 from collections import Counter
 from pathlib import Path
@@ -13,12 +12,12 @@ OWNER = 'ph-1dnjs'
 NAME = 'UNA'
 TAGLINE = '생각을 현실로 만들고, 그 결과를 세상에 보여주는 것을 좋아합니다.'
 FEATURED = ('checkly', 'doxen', 'auto-qa', 'interacta')
-TICKER = 'CREATE / BUILD / IMPROVE  ///  FRONTEND ENGINEER  ///  INTERACTION OBSESSED  ///  DESIGNED TO BUILD, LEARN & KEEP MOVING'
+TICKER = '(HEAD -> main) feat: turn ideas into real things  ///  npm run create && npm run build && npm run improve  ///  git push origin future'
+FOOTER = 'DESIGNED TO BUILD, LEARN & KEEP MOVING  ///  PROCESS EXITED WITH CODE 0  ///  SEE YOU IN THE NEXT COMMIT'
 TOKEN = os.environ.get('GITHUB_TOKEN', '')
 PRIVATE_TOKEN = os.environ.get('PROFILE_PRIVATE_TOKEN', '')
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / 'assets'
-STAMP_DATA = ROOT / 'data' / 'stamps.json'
 
 
 def request(url, token=TOKEN, data=None):
@@ -65,40 +64,22 @@ def contribution_data():
     return None, None
 
 
-def load_stamps():
-    try:
-        return json.loads(STAMP_DATA.read_text(encoding='utf-8'))
-    except (FileNotFoundError, json.JSONDecodeError):
-        return {'counts': {k: 0 for k in posters.STAMPS}, 'recent': []}
-
-
 def write(name, content):
     (ASSETS / name).write_text(content, encoding='utf-8')
 
 
 def render_static():
-    """Assets that need no network: hero, inuna, guestbook, buttons, footer."""
+    """Assets that need no network: hero, inuna, footer."""
     ASSETS.mkdir(exist_ok=True)
     write('hero.svg', posters.hero(NAME, TAGLINE, TICKER))
     write('inuna-preview.svg', posters.inuna())
-    write('stamps.svg', posters.stamp_wall(load_stamps()))
-    for kind in posters.STAMPS:
-        write(f'stamp-{kind}.svg', posters.stamp_button(kind))
-    write('footer.svg', posters.footer('THANKS FOR SCROLLING  ///  SEE YOU IN THE NEXT COMMIT  ///  UNA'))
-
-
-def stamp_link(kind):
-    query = urllib.parse.urlencode({'title': f'stamp:{kind}', 'body': '✦ Submit 버튼만 누르면 스탬프가 찍혀요. (자동으로 닫힙니다)'})
-    return f'https://github.com/{OWNER}/{OWNER}/issues/new?{query}'
+    write('footer.svg', posters.footer(FOOTER))
 
 
 def readme(featured, public_count, activity_value):
     projects = '\n'.join(
         f'<a href="{esc(r["html_url"])}"><img src="assets/project-{i}.svg" alt="{esc(r["name"])}" width="32%" /></a>'
         for i, r in enumerate(featured, 1)) or '표시할 공개 프로젝트가 없습니다.'
-    buttons = '\n'.join(
-        f'<a href="{esc(stamp_link(k))}"><img src="assets/stamp-{k}.svg" alt="{k} 스탬프 남기기" width="23%" /></a>'
-        for k in posters.STAMPS)
     return f'''<div align="center">
 
 <img src="assets/hero.svg" alt="Hi, I'm Una. {TAGLINE}" width="100%" />
@@ -110,7 +91,7 @@ def readme(featured, public_count, activity_value):
 <br /><br />
 
 <details>
-<summary><b>▶ INUNA</b> · 출시 심사 중 — 펼쳐서 미리보기</summary>
+<summary><code>&gt; inuna</code> · 출시 심사 중 — 펼쳐서 미리보기</summary>
 <br />
 <img src="assets/inuna-preview.svg" alt="Inuna는 현재 출시 심사 중입니다. 프로젝트 소개와 서비스 화면을 준비하고 있습니다." width="100%" />
 </details>
@@ -122,14 +103,6 @@ def readme(featured, public_count, activity_value):
 <br /><br />
 
 <img src="assets/activity.svg" alt="공개 저장소 {public_count}개, 최근 1년간 활동 {activity_value}건" width="100%" />
-
-<br /><br />
-
-<img src="assets/stamps.svg" alt="Pixel Party 방명록 — 방문자들이 남긴 스탬프" width="100%" />
-
-{buttons}
-
-<sub>버튼을 누르면 이슈 작성 화면이 열립니다 · <b>Submit</b> 한 번이면 약 1분 뒤 위 벽에 스탬프가 찍혀요</sub>
 
 <br /><br />
 

@@ -263,3 +263,17 @@ def ticker(y, width, text, height=30, speed=18):
             f'<g clip-path="url(#tk{y})"><text x="10" y="{y + height / 2 + 4}" font-size="11" font-weight="700" textLength="{n(unit_w * reps)}" lengthAdjust="spacing" '
             f'fill="{BG}" font-family="{MONO}" style="animation:mq{y} {speed}s linear infinite">{line}</text></g>'
             f'<style>@keyframes mq{y}{{to{{transform:translateX(-{n(unit_w)}px)}}}}</style></g>')
+
+
+def code(tokens, x, y, size=10, anchor='start'):
+    """One line of 'syntax highlighted' monochrome code.
+
+    tokens: list of (text, opacity) or (text, opacity, weight).
+    """
+    spans = []
+    for token in tokens:
+        text, opacity = token[0], token[1]
+        weight = token[2] if len(token) > 2 else 400
+        spans.append(f'<tspan fill-opacity="{opacity}" font-weight="{weight}">{esc(text)}</tspan>')
+    return (f'<text x="{n(x)}" y="{n(y)}" font-size="{size}" fill="{INK}" text-anchor="{anchor}" '
+            f'font-family="{MONO}" xml:space="preserve">{"".join(spans)}</text>')
