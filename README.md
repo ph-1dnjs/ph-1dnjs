@@ -22,7 +22,7 @@
 
 <br /><br />
 
-<img src="assets/activity.svg" alt="공개 저장소 42개, 최근 1년간 활동 41건" width="100%" />
+<img src="assets/activity.svg" alt="공개 저장소 42개, 최근 1년간 활동 43건" width="100%" />
 
 <br /><br />
 
